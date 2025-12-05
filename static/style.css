@@ -1,0 +1,50 @@
+/* Simple, clean styling for the prediction form */
+:root{
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --accent: #2b7a78;
+  --muted: #6b7280;
+}
+html,body{height:100%;}
+body{
+  background: linear-gradient(180deg, #eef6f7 0%, var(--bg) 100%);
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  margin:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:32px;
+}
+.container{
+  width:100%;
+  max-width:760px;
+  margin:auto;
+}
+
+h1{ text-align:center; color:var(--accent); margin-bottom:18px; }
+
+.survey-form{
+  background:var(--card);
+  border-radius:12px;
+  box-shadow:0 6px 20px rgba(21,28,41,0.08);
+  padding:22px;
+}
+
+.row{ margin-bottom:14px; display:flex; flex-direction:column; }
+.two-col{ display:flex; gap:14px; }
+.two-col > div{ flex:1; }
+
+label{ font-weight:600; margin-bottom:6px; color:var(--muted); }
+input[type="number"], select{ padding:10px 12px; border-radius:8px; border:1px solid #e7edf0; background:#fbfeff; font-size:15px; }
+
+.btn{ display:inline-block; background:var(--accent); color:#fff; padding:10px 14px; border-radius:8px; text-decoration:none; border:none; cursor:pointer; font-weight:600; }
+.btn:hover{ opacity:0.95 }
+
+.card{ background:var(--card); padding:22px; border-radius:12px; box-shadow: 0 8px 30px rgba(20,25,31,0.07); text-align:center; }
+.result{ font-size:20px; color:#111827; margin:12px 0; }
+.note{ color:var(--muted); font-size:14px; }
+.error{ color:#b9241b; font-weight:700; }
+
+@media (max-width:640px){
+  .two-col{ flex-direction:column }
+}
